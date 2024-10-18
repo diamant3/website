@@ -1,7 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import {
-  createBrowserRouter,
+  //createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from 'react-router-dom'
 
@@ -12,7 +13,8 @@ import { Err } from './Err.jsx'
 import { Projects } from './pages/Projects.jsx'
 import { AboutMe } from './pages/AboutMe.jsx'
 
-const router = createBrowserRouter([
+//const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <App />,
