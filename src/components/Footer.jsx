@@ -1,6 +1,6 @@
 export function Footer() {
     return (
-        <div className="flex justify-evenly items-center py-10 font-mono">
+        <div className="flex flex-col md:flex-row justify-evenly items-center py-10 font-mono">
             <a
                 href="https://linkedin.com/in/diamant3"
                 className="text-2xl hover:text-blue-600"
