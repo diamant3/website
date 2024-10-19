@@ -1,7 +1,6 @@
 import { Header } from "../components/Header.jsx";
 import { Card } from "../components/Card.jsx";
 
-
 export function Projects() {
     const projects = [
         {
@@ -36,7 +35,7 @@ export function Projects() {
         }
     ]
 
-    const projectList = projects.map(project => 
+    const projectList = projects.map(project =>
         <div key={project.id} className="w-full sm:w-1/2 md:w-1/3">
             <Card 
                 name={project.name}
