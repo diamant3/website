@@ -22,7 +22,7 @@ export function AboutMe() {
             id: 0,
             name: "Station Square East Commercial Corporation",
             desc: "On-the-Job Training in the Finance Department",
-            year: "80 Hours"
+            year: "2018(80 Hours)"
         }
     ]
 
