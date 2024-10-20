@@ -75,13 +75,13 @@ export function AboutMe() {
     return (
         <>
             <Header />
-            <h1 className="text-4xl font-mono text-center text-blue-600 pt-2 mt-4">Education</h1>
+            <h1 className="text-4xl font-mono font-bold text-center text-blue-600 pt-2 mt-4">Education</h1>
             {eduList}
 
-            <h1 className="text-4xl font-mono text-center text-blue-600 pt-2">Careers</h1>
+            <h1 className="text-4xl font-mono font-bold text-center text-blue-600 pt-2">Careers</h1>
             {careerList}
 
-            <h1 className="text-4xl font-mono text-center text-blue-600 pt-2">Organizations</h1>
+            <h1 className="text-4xl font-mono font-bold text-center text-blue-600 pt-2">Organizations</h1>
             {organizationList}
         </>
     );
