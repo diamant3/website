@@ -32,6 +32,12 @@ export function Projects() {
             name: 'vchip8',
             description: 'CHIP-8 interpreter written in V',
             link: 'https://github.com/diamant3/vchip8',
+        },
+        {
+            id: 5,
+            name: 'SRTF-Visualizer',
+            description: 'SRTF scheduling solver',
+            link: 'https://github.com/diamant3/SRTF-Visualizer',
         }
     ]
 
