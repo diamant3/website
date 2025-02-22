@@ -7,14 +7,7 @@ export default function Nav() {
     return (
         <div className="flex flex-col w-screen">
             {/* Header */}
-            <header className="flex items-center justify-center mx-4 text-white p-2">
-                <div className="flex items-center space-x-2">
-                    <img
-                        src="https://github.com/diamant3.png"
-                        alt="Profile"
-                        className="w-24 rounded-full"
-                    />
-                </div>
+            <header className="flex items-center justify-center text-white">
                 {/* <button
                     className="p-2 rounded-md text-white md:hidden"
                     onClick={() => setIsOpen(!isOpen)}
