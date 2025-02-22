@@ -58,12 +58,12 @@ export function Projects() {
       {projects.length > 0 ? (
         <div className="relative">
           {/* Left Scroll Button */}
-          <button 
+          {/* <button 
             className="absolute left-0 top-1/2 -translate-y-1/2 bg-blue-400 p-3 rounded-full shadow-lg z-10 hover:bg-blue-500 transition"
             onClick={() => scroll("left")}
           >
             <ChevronLeft color="white" size={28} />
-          </button>
+          </button> */}
 
           {/* Project List */}
           <div 
@@ -74,12 +74,12 @@ export function Projects() {
           </div>
           
           {/* Right Scroll Button */}
-          <button 
+          {/* <button 
             className="absolute right-0 top-1/2 -translate-y-1/2 bg-blue-400 p-3 rounded-full shadow-lg z-10 hover:bg-blue-500 transition"
             onClick={() => scroll("right")}
           >
             <ChevronRight color="white" size={28} />
-          </button>
+          </button> */}
         </div>
       ) : (
         <p className="text-center text-gray-300">No projects available</p>

@@ -34,14 +34,14 @@ export function Experience() {
       title: "Volunteering",
       items: [
         {
-          organization: "Open Source Contributor",
-          role: "Developer",
+          organization: "Organization A",
+          role: "Position A",
           years: "2021 - Present",
         },
         {
-          organization: "Local Tech Community",
-          role: "Mentor & Speaker",
-          years: "2022 - Present",
+          organization: "PSPDEV",
+          role: "Contributor & Member",
+          years: "2023 - Present",
         },
       ],
     },
@@ -67,7 +67,7 @@ export function Experience() {
                 {section.items.map((item, i) => (
                   <div key={i} className="bg-gray-900 p-4 rounded-md shadow">
                     <p className="text-lg text-white font-semibold">{item.role || item.degree}</p>
-                    <p className="text-gray-300">{item.company || item.institution}</p>
+                    <p className="text-gray-300">{item.company || item.institution || item.organization}</p>
                     <p className="text-gray-400">{item.years}</p>
                   </div>
                 ))}

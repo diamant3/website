@@ -1,6 +1,6 @@
 export function Footer() {
     return (
-        <div className="w-full max-w-4xl mx-auto text-center">
+        <div className="w-full max-w-4xl mx-auto text-center mb-8">
             <h1 className="text-4xl md:text-5xl font-extrabold text-center text-white relative mb-8">
                 Contact
                 <span className="block h-1 w-24 bg-blue-500 mx-auto mt-2 rounded-full"></span>
