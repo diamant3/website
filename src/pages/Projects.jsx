@@ -1,62 +1,73 @@
-import { Header } from "../components/Header.jsx";
-import { Card } from "../components/Card.jsx";
+import { useState, useRef, useEffect } from "react";
+import { motion } from "motion/react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export function Projects() {
-    const projects = [
-        {
-            id: 0,
-            name: 'sysig',
-            description: 'Simple application to gather your system information in your computer. 🔍',
-            link: 'https://github.com/diamant3/sysig',
-        },
-        {
-            id: 1,
-            name: 'psp-controller',
-            description: 'Remotely control Wi-Fi based microcontrollers with the PSP.',
-            link: 'https://github.com/diamant3/psp-controller',
-        },
-        {
-            id: 2,
-            name: 'chip-walo',
-            description: 'CHIP-8 Interpreter',
-            link: 'https://github.com/diamant3/chip-walo',
-        },
-        {
-            id: 3,
-            name: 'LBP',
-            description: 'Bytepusher VM',
-            link: 'https://github.com/diamant3/LBP',
-        },
-        {
-            id: 4,
-            name: 'vchip8',
-            description: 'CHIP-8 interpreter written in V',
-            link: 'https://github.com/diamant3/vchip8',
-        },
-        {
-            id: 5,
-            name: 'SRTF-Visualizer',
-            description: 'SRTF scheduling solver',
-            link: 'https://github.com/diamant3/SRTF-Visualizer',
-        }
-    ]
+  const carouselRef = useRef(null);
+  const [projects, setProjects] = useState([]);
+  const myProjectList = ["sysig", "psp-controller", "chip-walo", "lbp", "vchip8", "srtf-visualizer"];
 
-    const projectList = projects.map(project =>
-        <div key={project.id} className="w-full sm:w-1/2 md:w-1/3">
-            <Card 
-                name={project.name}
-                description={project.description}
-                link={project.link}
-            />
-        </div>
-    );
+  useEffect(() => {
+    const url = "https://api.github.com/users/diamant3/repos?per_page=70";
+    const fetchRepos = async () => {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        setProjects(data);
+      } catch (error) {
+        setError(error.message);
+      }
+    };
 
-    return (
+    fetchRepos();
+  }, []);
+
+  const projectItems = projects.filter(item => myProjectList.includes(item.name.trim().toLowerCase()));
+  const projectList = projectItems.map((project, index) => (
+    <motion.div
+      key={index}
+      className="flex-shrink-0 w-full bg-slate-100 p-6 rounded-lg shadow-md text-center mx-1" 
+    >
+      <img src={ "https://picsum.photos/200/300" } alt={project.title} className="w-full h-64 object-cover rounded-md mb-4" />
+      <h3 className="text-3xl font-bold">{project.name}</h3>
+      <p className="text-gray-600 mb-4">{project.description}</p>
+      <a href={project.html_url} className="text-blue-600 font-semibold">View Project</a>
+    </motion.div>
+  ))
+
+  const scroll = (direction) => {
+    if (carouselRef.current) {
+      const scrollAmount = 460;
+      carouselRef.current.scrollBy({ left: direction === "left" ? -scrollAmount : scrollAmount, behavior: "smooth" });
+    }
+  };
+
+  return (
+    <div className="relative w-[90%] max-w-lg mx-auto overflow-hidden p-6">
+      <h2 className="text-4xl font-bold text-center text-white mb-4" id="#projects">Projects</h2>
+      {projects.length > 0 ? (
         <>
-            <Header />
-            <div className="flex flex-wrap">
-                {projectList}
-            </div>
+          <button 
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-blue-400 p-2 rounded-full shadow-md z-10"
+            onClick={() => scroll("left")}
+          >
+            <ChevronLeft color="white" size={24} />
+          </button>
+
+          <div ref={carouselRef} className="flex overflow-x-scroll no-scrollbar scroll-smooth w-full rounded-lg px-2">
+            {projectList}
+          </div>
+          
+          <button 
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-blue-400 p-2 rounded-full shadow-md z-10"
+            onClick={() => scroll("right")}
+          >
+            <ChevronRight color="white" size={24} />
+          </button>
         </>
-    );
+      ) : (
+        <p className="text-center text-red-600">No projects available</p>
+      )}
+    </div>
+  );
 }
