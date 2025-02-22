@@ -1,33 +1,6 @@
 export function About() {
-    const education = [
-        {
-            id: 0,
-            name: "University of Makati",
-            desc: "Bachelor of Science in Computer Science",
-            year: "2019 - current",
-            website: "https://umak.edu.ph"
-        },
-        {
-            id: 1,
-            name: "MCA Montessori School",
-            desc: "Information Communication and Technology",
-            year: "2017 - 2019",
-            website: "https://mcams.edu.ph/"
-        },
-    ]
-
-    const career = [
-        {
-            id: 0,
-            name: "Station Square East Commercial Corporation",
-            desc: "On-the-Job Training in the Finance Department",
-            year: "2018(80 Hours)",
-            website: "#" // no website
-        }
-    ]
-
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen py-12 px-4 sm:px-6 md:px-16">
+        <div className="flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 md:px-16">
             {/* Section Title */}
             <h1 className="text-4xl md:text-5xl font-extrabold text-center text-white relative">
                 About Me
@@ -35,7 +8,7 @@ export function About() {
             </h1>
     
             {/* Content Wrapper with Glassmorphism Effect */}
-            <div className="mt-8 max-w-3xl bg-white/10 backdrop-blur-md p-6 md:p-8 rounded-xl shadow-lg">
+            <div className="mt-8 max-w-3xl bg-gray-800 backdrop-blur-md p-6 md:p-8 rounded-xl shadow-lg">
                 <p className="text-lg md:text-2xl text-white text-center leading-relaxed">
                     Hi, I'm <span className="text-blue-400 font-semibold">Diamond Engalan Rivero</span>, a passionate programmer from Taguig, Philippines,  
                     with a deep interest in **system-level development**. I love exploring how computers work from the ground up—whether it's low-level programming,  

@@ -47,9 +47,12 @@ export function Projects() {
   };
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto overflow-hidden p-8">
-      <h2 className="text-4xl font-bold text-center text-white mb-6" id="projects">Projects</h2>
-      
+    <div className="relative w-full max-w-5xl mx-auto overflow-hidden py-12">
+      <h1 className="text-4xl md:text-5xl font-extrabold text-center text-white relative mb-8">
+        Project Showcase
+      <span className="block h-1 w-24 bg-blue-500 mx-auto mt-2 rounded-full"></span>
+      </h1>
+
       {error && <p className="text-center text-red-500">{error}</p>}
       
       {projects.length > 0 ? (

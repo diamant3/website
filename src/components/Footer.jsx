@@ -1,7 +1,10 @@
 export function Footer() {
     return (
-        <div className="w-full max-w-4xl mx-auto text-center py-8">
-            <h1 className="text-4xl font-bold text-white mb-6">Contacts</h1>
+        <div className="w-full max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-center text-white relative mb-8">
+                Contact
+                <span className="block h-1 w-24 bg-blue-500 mx-auto mt-2 rounded-full"></span>
+            </h1>
 
             <div className="flex flex-wrap justify-center items-center gap-6">
                 <a href="https://linkedin.com/in/diamant3" target="_blank">
