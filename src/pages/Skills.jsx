@@ -12,6 +12,8 @@ const skillsData = [
     "PHP",
     "GitHub",
     "Git",
+    "Android Studio",
+    "Java",
     "..."
 ];
 

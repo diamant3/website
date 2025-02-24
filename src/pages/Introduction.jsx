@@ -11,6 +11,7 @@ export function Introduction() {
                         src={profileImg}
                         alt="Profile"
                         className="absolute inset-0 w-full h-full object-cover"
+                        loading="lazy"
                     />
                 </div>
             </div>

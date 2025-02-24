@@ -32,6 +32,7 @@ export function Projects() {
         src={"https://picsum.photos/400/250"} 
         alt={project.name} 
         className="w-full h-40 object-cover rounded-xl mb-4"
+        loading="lazy"
       />
       <h3 className="text-xl font-bold text-white">{project.name}</h3>
       <p className="text-gray-400 text-sm mb-4">{project.description || "No description available."}</p>
