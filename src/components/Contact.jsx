@@ -1,4 +1,4 @@
-export function Footer() {
+export function Contact() {
     return (
         <div className="w-full max-w-4xl mx-auto text-center mb-8">
             <h1 className="text-4xl md:text-5xl font-extrabold text-center text-white relative mb-8">
