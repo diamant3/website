@@ -54,7 +54,7 @@ export function Contact() {
 
       {/* Social Buttons */}
       <div className="flex flex-wrap justify-center items-center gap-6">
-        {contactLinks.map(({ href, color, label, icon }) => (
+        {contactLinks.map(({href, color, label, icon}) => (
           <motion.a
             key={label}
             href={href}
@@ -63,7 +63,7 @@ export function Contact() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className={`bg-white hover:bg-${color} hover:text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110`}
+            className={`bg-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 ${color === "[#0077b5]" ? "hover:bg-[#0077b5]" : ""} ${color === "[#333]" ? "hover:bg-[#333]" : ""} ${color === "[#1da1f2]" ? "hover:bg-[#1da1f2]" : ""} ${color === "violet-600" ? "hover:bg-violet-600" : ""}`}
             aria-label={label}
           >
             {icon}

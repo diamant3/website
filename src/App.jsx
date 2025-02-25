@@ -10,19 +10,19 @@ import { Skills } from "./pages/Skills.jsx";
 
 export default function App() {
   return (
-    <div>
+    <>
       <Analytics />
       <Nav />
-      <section id="intro" className="h-screen flex justify-center items-center">
+      <section id="intro">
         <Introduction />
       </section>
       <section id="about"><About /></section>
       <section id="experience"><Experience /></section>
       <section id="skills"><Skills /></section>
       <section id="projects"><Projects /></section>
-      <section id="contact" className="min-h-screen flex justify-center items-center">
+      <section id="contact">
         <Contact />
       </section>
-    </div>
+    </>
   );
 }
