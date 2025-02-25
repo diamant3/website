@@ -13,14 +13,14 @@ export default function App() {
     <div>
       <Analytics />
       <Nav />
-      <section id="intro" className="h-screen flex justify-center items-center bg-gray-800 text-white text-4xl">
+      <section id="intro" className="h-screen flex justify-center items-center">
         <Introduction />
       </section>
       <section id="about"><About /></section>
       <section id="experience"><Experience /></section>
       <section id="skills"><Skills /></section>
       <section id="projects"><Projects /></section>
-      <section id="contact" className="min-h-screen flex justify-center items-center text-2xl">
+      <section id="contact" className="min-h-screen flex justify-center items-center">
         <Contact />
       </section>
     </div>
