@@ -42,10 +42,10 @@ export function Nav() {
             {/* Top Navbar */}
             <nav
                 className={`fixed top-0 left-0 w-full backdrop-blur-lg bg-opacity-50 transition-all duration-300 z-50 ${
-                    scrolled ? "bg-gray-900/80 shadow-lg" : "bg-transparent"
+                    scrolled ? "bg-transparent py-2" : "bg-gray-900/80 shadow-lg py-4"
                 }`}
             >
-                <div className="container mx-auto flex justify-between items-center px-6 md:px-12 py-4">
+                <div className="container mx-auto flex justify-between items-center px-6 md:px-12 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}">
                     {/* Logo */}
                     <h1 className="text-2xl font-extrabold text-blue-400 tracking-wide">Diamond Rivero</h1>
 
@@ -80,8 +80,8 @@ export function Nav() {
                 } md:hidden`}
             >
                 {/* Sidebar Header */}
-                <div className="flex justify-between items-center px-6 py-4 border-b border-gray-700">
-                    <h2 className="text-lg font-semibold text-blue-400">Menu</h2>
+                <div className="flexjustify-between items-center px-6 py-4 border-b border-gray-700">
+                {/* <h2 className="text-lg font-semibold text-blue-400">Menu</h2> */}
                     <button onClick={() => setSidebarOpen(false)}>
                         <X size={30} className="text-white" />
                     </button>

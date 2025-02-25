@@ -58,7 +58,7 @@ export function Projects() {
               className="flex-shrink-0 w-72 md:w-96 bg-gray-800 p-6 rounded-xl shadow-lg text-center"
             >
               <img
-                src={`https://source.unsplash.com/400x250/?technology,code&sig=${index}`}
+                src={`https://picsum.photos/200/300?random=${index}`}
                 alt={project.name}
                 className="w-full h-40 object-cover rounded-xl mb-4"
                 loading="lazy"
