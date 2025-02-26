@@ -29,8 +29,8 @@ export function Experience() {
         },
         {
           company: "Station Square East Commercial Corporation",
-          role: "OJT - Finance Department",
-          years: "2018",
+          role: "IT Support Specialist Trainee",
+          years: "2018 (80 Hours)",
         },
       ],
     },
