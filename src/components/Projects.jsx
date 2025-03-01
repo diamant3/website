@@ -46,8 +46,7 @@ export function Projects() {
       ) : projects.length > 0 ? (
         <div
           ref={carouselRef}
-          className="flex overflow-x-scroll no-scrollbar snap-x snap-mandatory gap-6 px-4 py-2"
-          style={{ overflowY: "hidden" }} // Hides vertical scrolling
+          className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory gap-6 px-4 py-2 w-full max-w-full"
         >
           {projects.map((project, index) => (
             <motion.div
