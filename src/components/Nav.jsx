@@ -6,7 +6,7 @@ export function Nav() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
-    const navList = ["intro", "about", "experience", "skills", "projects", "contact"];
+    const navList = ["intro", "about", "experience", "skills", "certificate", "projects", "contact"];
 
     useEffect(() => {
         const handleScroll = () => {

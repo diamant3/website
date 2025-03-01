@@ -7,6 +7,7 @@ import { About } from "./components/About.jsx";
 import { Introduction } from "./components/Introduction.jsx";
 import { Experience } from "./components/Experience.jsx";
 import { Skills } from "./components/Skills.jsx";
+import { Certificates } from "./components/Certificates.jsx";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
       <section id="about"><About /></section>
       <section id="experience"><Experience /></section>
       <section id="skills"><Skills /></section>
+      <section id="certificate"><Certificates /></section>
       <section id="projects"><Projects /></section>
       <section id="contact">
         <Contact />
