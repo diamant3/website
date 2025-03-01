@@ -29,7 +29,7 @@ export function Contact() {
   ];
 
   return (
-    <div className="w-full max-w-4xl mx-auto text-center py-12">
+    <div className="w-full min-h-[120vh] flex flex-col items-center justify-center text-center py-20 px-6">
       {/* Animated Title */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}

@@ -3,65 +3,45 @@ import { useInView } from "react-intersection-observer";
 
 export function Introduction() {
     const profileImg = "https://avatars.githubusercontent.com/u/71203851?v=4";
-    const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.2 });
+    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
     return (
-        <div className="text-white min-h-screen flex flex-col items-center justify-center mt-8">
-            {/* Hero Section */}
+        <div className="text-white min-h-screen flex flex-col items-center justify-center px-6 mt-12">
             <motion.div 
                 ref={ref} 
-                initial={{ opacity: 0, y: 50 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                exit={{ opacity: 0, y: -50 }}
-                transition={{ duration: 1 }}
-                className="flex flex-col md:flex-row justify-center items-center w-full max-w-5xl px-6 md:px-20 gap-8 md:gap-12 py-12"
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.6 }}
+                className="flex flex-col items-center text-center"
             >
-                {/* Image Section */}
-                <motion.div 
-                    initial={{ opacity: 0, y: 50 }} 
-                    animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                    exit={{ opacity: 0, y: -50 }}
-                    transition={{ duration: 1 }}
-                    className="w-full md:w-1/2 flex justify-center"
-                >
-                    <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl">
-                        <img
-                            src={profileImg}
-                            alt="Profile"
-                            className="absolute inset-0 w-full h-full object-cover"
-                            loading="lazy"
-                        />
-                    </div>
-                </motion.div>
+                {/* Profile Image */}
+                <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl mb-6">
+                    <img
+                        src={profileImg}
+                        alt="Profile"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                    />
+                </div>
 
                 {/* Text Section */}
-                <motion.div 
-                    initial={{ opacity: 0, x: 50 }} 
-                    animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-                    exit={{ opacity: 0, x: -50 }}
-                    transition={{ duration: 1 }}
-                    className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left"
+                <h1 className="text-4xl md:text-5xl font-bold pb-2 text-white">
+                    Hey, I'm Diamond Rivero
+                </h1>
+                <p className="text-2xl md:text-3xl font-mono font-semibold leading-tight text-gray-300">
+                    Enthusiastic about computers and anything related!
+                </p>
+                
+                {/* Contact Button */}
+                <motion.a 
+                    href="#contact" 
+                    className="mt-6 px-6 py-3 bg-blue-500 text-white text-lg font-bold rounded-full shadow-lg hover:bg-blue-600 transition duration-300"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.4 }}
                 >
-                    <p className="text-3xl md:text-4xl font-bold pb-4 bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text animate-pulse">
-                        Hey, I'm Diamond Rivero
-                    </p>
-                    <p className="text-4xl md:text-6xl font-mono font-bold leading-tight bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text animate-pulse">
-                        Enthusiastic about computers and anything related!
-                    </p>
-                    <motion.div 
-                        initial={{ opacity: 0, scale: 0.8 }} 
-                        animate={{ opacity: 1, scale: 1 }} 
-                        transition={{ duration: 0.5, delay: 0.5 }}
-                        className="mt-6"
-                    >
-                        <a 
-                            href="#contact" 
-                            className="px-6 py-3 bg-blue-500 text-white text-lg font-bold rounded-full shadow-lg hover:bg-blue-600 transition duration-300"
-                        >
-                            Contact Me
-                        </a>
-                    </motion.div>
-                </motion.div>
+                    Contact Me
+                </motion.a>
             </motion.div>
         </div>
     );
