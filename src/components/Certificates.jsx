@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const certificates = [
   { id: 1, title: "LFW111: Introduction to Node.js", link: "https://www.credly.com/badges/5ea95276-da21-4f4e-abac-19c547c2be8d/public_url" },
-  { id: 2, title: "Sample Title", link: "#" },
+  { id: 2, title: "Postman API Fundamentals Student Expert", link: "https://badgr.com/public/assertions/WKz2boX4Ql-WFXUdNicsDw" },
   { id: 3, title: "Sample Title", link: "#" },
 ];
 
