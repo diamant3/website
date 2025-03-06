@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export function Experience() {
+export default function Experience() {
   const experiences = [
     {
       title: "Education",

@@ -7,7 +7,7 @@ const certificates = [
   { id: 3, title: "Frontend Developer (React)", link: "https://www.hackerrank.com/certificates/58adae952c76" },
 ];
 
-export function Certificates() {
+export default function Certificates() {
   return (
     <div className="w-full flex flex-col justify-center items-center text-white p-4">
       <motion.h1 

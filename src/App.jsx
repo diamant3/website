@@ -1,13 +1,13 @@
 import { Analytics } from "@vercel/analytics/react";
 
-import { Nav } from "./components/Nav.jsx";
-import { Contact } from "./components/Contact.jsx";
-import { Projects } from "./components/Projects.jsx";
-import { About } from "./components/About.jsx";
-import { Introduction } from "./components/Introduction.jsx";
-import { Experience } from "./components/Experience.jsx";
-import { Skills } from "./components/Skills.jsx";
-import { Certificates } from "./components/Certificates.jsx";
+import Nav from "./components/Nav";
+import Contact from "./components/Contact";
+import Projects from "./components/Projects";
+import About from "./components/About";
+import Introduction from "./components/Introduction";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
+import Certificates from "./components/Certificates";
 
 export default function App() {
   return (

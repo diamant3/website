@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const myProjectList = ["sysig", "psp-controller", "chip-walo", "lbp", "vchip8", "srtf-visualizer"];
 
-export function Projects() {
+export default function Projects() {
   const carouselRef = useRef(null);
   const [projects, setProjects] = useState([]);
   const [error, setError] = useState("");

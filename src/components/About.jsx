@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export function About() {
+export default function About() {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 md:px-16">
             <motion.div

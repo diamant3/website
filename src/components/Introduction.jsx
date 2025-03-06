@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-export function Introduction() {
+export default function Introduction() {
     const profileImg = "https://avatars.githubusercontent.com/u/71203851?v=4";
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 

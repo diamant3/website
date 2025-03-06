@@ -19,7 +19,7 @@ const skillsData = [
   { name: "Java", icon: "devicon-java-plain" },
 ];
 
-export function Skills() {
+export default function Skills() {
   return (
     <div className="max-w-4xl mx-auto p-6">
       {/* Animated Title */}
