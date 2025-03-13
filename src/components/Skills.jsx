@@ -21,7 +21,7 @@ const skillsData = [
 
 export default function Skills() {
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="text-white min-h-screen flex flex-col items-center justify-center px-6 mt-12">
       {/* Animated Title */}
       <motion.h1
         initial={{ opacity: 0, scale: 0.8 }}

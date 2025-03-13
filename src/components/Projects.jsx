@@ -24,7 +24,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto overflow-hidden py-12">
+    <div className="text-white min-h-screen flex flex-col items-center justify-center px-6 mt-12">
       {/* Animated Title */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
@@ -46,7 +46,7 @@ export default function Projects() {
       ) : projects.length > 0 ? (
         <div
           ref={carouselRef}
-          className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory gap-6 px-4 py-2 w-full max-w-full"
+          className="flex overflow-y-hidden no-scrollbar snap-x snap-mandatory gap-6 px-4 py-2 w-full max-w-full"
         >
           {projects.map((project, index) => (
             <motion.div

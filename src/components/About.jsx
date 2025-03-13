@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 md:px-16">
+        <div className="text-white min-h-screen flex flex-col items-center justify-center px-6 mt-12 bg-blue-800">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

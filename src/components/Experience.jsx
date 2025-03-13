@@ -52,7 +52,7 @@ export default function Experience() {
   ];
 
   return (
-    <div className="py-12 px-6 flex flex-col items-center">
+    <div className="text-white min-h-screen flex flex-col items-center justify-center px-6 mt-12">
       {/* Animated Title */}
       <motion.h1
         initial={{ opacity: 0, scale: 0.8 }}

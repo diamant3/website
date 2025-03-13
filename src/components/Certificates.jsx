@@ -9,7 +9,7 @@ const certificates = [
 
 export default function Certificates() {
   return (
-    <div className="w-full flex flex-col justify-center items-center text-white p-4">
+    <div className="text-white min-h-screen flex flex-col items-center justify-center px-6 mt-12">
       <motion.h1 
         className="text-4xl md:text-5xl font-extrabold text-center text-white"
         initial={{ opacity: 0, y: -30, scale: 0.8 }}
