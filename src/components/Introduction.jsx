@@ -6,7 +6,7 @@ export default function Introduction() {
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
     return (
-        <div className="text-white min-h-screen flex flex-col items-center justify-center px-6 mt-12">
+        <div className="text-white min-h-screen flex flex-col items-center justify-center mt-8">
             <motion.div 
                 ref={ref} 
                 initial={{ opacity: 0, y: 20 }}
@@ -15,7 +15,7 @@ export default function Introduction() {
                 className="flex flex-col items-center text-center"
             >
                 {/* Profile Image */}
-                <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl mb-6">
+                <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl">
                     <img
                         src={profileImg}
                         alt="Profile"
