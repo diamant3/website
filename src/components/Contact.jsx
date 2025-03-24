@@ -29,15 +29,15 @@ export default function Contact() {
   ];
 
   return (
-    <div className="w-full min-h-[120vh] flex flex-col items-center justify-center text-center py-20 px-6">
+    <div className="w-full min-h-[120vh] flex flex-col items-center justify-center text-center px-6">
       {/* Animated Title */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-4xl md:text-5xl font-extrabold text-white mb-8"
+        className="text-4xl md:text-5xl font-extrabold text-white mb-4"
       >
-        Get In Touch
+        Contact
         <motion.span
           initial={{ width: 0 }}
           whileInView={{ width: "6rem" }}

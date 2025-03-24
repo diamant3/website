@@ -9,9 +9,9 @@ const certificates = [
 
 export default function Certificates() {
   return (
-    <div className="text-white min-h-screen flex flex-col items-center justify-center px-6 mt-12">
+    <div className="min-h-screen flex flex-col items-center justify-center px-6">
       <motion.h1 
-        className="text-4xl md:text-5xl font-extrabold text-center text-white"
+        className="text-4xl md:text-5xl font-extrabold text-center text-slate-200"
         initial={{ opacity: 0, y: -30, scale: 0.8 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -38,12 +38,12 @@ export default function Certificates() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <p className="font-bold">{cert.title}</p>
+            <p className="font-bold text-slate-200">{cert.title}</p>
             <motion.a 
               href={cert.link} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-blue-400 hover:underline"
+              className="text-blue-400 hover:underline font-semibold"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}

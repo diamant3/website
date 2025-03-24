@@ -24,15 +24,15 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="text-white min-h-screen flex flex-col items-center justify-center px-6 mt-12">
+    <div className="min-h-screen flex flex-col items-center justify-center px-6">
       {/* Animated Title */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-4xl md:text-5xl font-extrabold text-center text-white mb-8"
+        className="text-4xl md:text-5xl font-extrabold text-center text-slate-200 mb-8"
       >
-        Project Showcase
+        Projects
         <motion.span
           initial={{ width: 0 }}
           whileInView={{ width: "6rem" }}
@@ -46,7 +46,7 @@ export default function Projects() {
       ) : projects.length > 0 ? (
         <div
           ref={carouselRef}
-          className="flex overflow-y-hidden no-scrollbar snap-x snap-mandatory gap-6 px-4 py-2 w-full max-w-full"
+          className="flex overflow-y-hidden no-scrollbar snap-x snap-mandatory gap-6 px-4 w-full max-w-full"
         >
           {projects.map((project, index) => (
             <motion.div
@@ -54,7 +54,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
-              className="flex-shrink-0 w-72 md:w-96 bg-gray-800 p-6 rounded-xl shadow-lg text-center"
+              className="flex-shrink-0 w-72 md:w-96 bg-gray-700 p-6 rounded-xl shadow-lg text-center"
             >
               <img
                 src={`https://picsum.photos/200/300?random=${index}`}
@@ -62,8 +62,8 @@ export default function Projects() {
                 className="w-full h-40 object-cover rounded-xl mb-4"
                 loading="lazy"
               />
-              <h3 className="text-xl font-bold text-white">{project.name}</h3>
-              <p className="text-gray-400 text-sm mb-4">{project.description || "No description available."}</p>
+              <h3 className="text-xl font-bold text-slate-200">{project.name}</h3>
+              <p className="text-slate-300 text-sm mb-4">{project.description || "No description available."}</p>
               <a href={project.html_url} className="text-blue-400 font-semibold hover:underline">
                 View Project
               </a>

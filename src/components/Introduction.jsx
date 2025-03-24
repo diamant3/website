@@ -6,7 +6,7 @@ export default function Introduction() {
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
     return (
-        <div className="text-white min-h-screen flex flex-col items-center justify-center mt-8">
+        <div className="min-h-screen flex flex-col items-center justify-center mt-4 px-2">
             <motion.div 
                 ref={ref} 
                 initial={{ opacity: 0, y: 20 }}
@@ -15,7 +15,7 @@ export default function Introduction() {
                 className="flex flex-col items-center text-center"
             >
                 {/* Profile Image */}
-                <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl">
+                <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden">
                     <img
                         src={profileImg}
                         alt="Profile"
@@ -25,17 +25,17 @@ export default function Introduction() {
                 </div>
 
                 {/* Text Section */}
-                <h1 className="text-4xl md:text-5xl font-bold pb-2 text-white">
+                <h1 className="text-4xl md:text-5xl font-bold text-slate-200">
                     Hey, I'm Diamond Rivero
                 </h1>
-                <p className="text-2xl md:text-3xl font-mono font-semibold leading-tight text-gray-300">
-                    Enthusiastic about computers and anything related!
+                <p className="text-2xl md:text-3xl font-mono font-bold leading-tight text-gray-400">
+                    Aspiring Computer Programmer
                 </p>
                 
                 {/* Contact Button */}
                 <motion.a 
                     href="#contact" 
-                    className="mt-6 px-6 py-3 bg-blue-500 text-white text-lg font-bold rounded-full shadow-lg hover:bg-blue-600 transition duration-300"
+                    className="mt-6 px-6 py-3 bg-blue-600 text-slate-200 font-bold rounded-md shadow-lg hover:bg-slate-200 hover:text-black transition duration-400"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4 }}

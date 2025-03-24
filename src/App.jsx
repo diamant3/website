@@ -20,7 +20,7 @@ export default function App() {
       <section id="about"><About /></section>
       <section id="experience"><Experience /></section>
       <section id="skills"><Skills /></section>
-      <section id="certificate"><Certificates /></section>
+      <section id="certificates"><Certificates /></section>
       <section id="projects"><Projects /></section>
       <section id="contact">
         <Contact />

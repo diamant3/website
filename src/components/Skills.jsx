@@ -21,13 +21,13 @@ const skillsData = [
 
 export default function Skills() {
   return (
-    <div className="text-white min-h-screen flex flex-col items-center justify-center px-6 mt-12">
+    <div className="text-slate-200 min-h-screen flex flex-col items-center justify-center px-6 mt-12">
       {/* Animated Title */}
       <motion.h1
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-4xl md:text-5xl font-extrabold text-center text-white mb-6"
+        className="text-4xl md:text-5xl font-extrabold text-center text-slate-200 mb-6"
       >
         Skills
         <motion.span
@@ -46,9 +46,9 @@ export default function Skills() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
-            className="flex flex-col items-center bg-gray-800 text-white font-semibold py-4 px-6 rounded-lg shadow-md text-center"
+            className="flex flex-col items-center bg-gray-700 text-slate-200 font-semibold py-4 px-6 rounded-lg shadow-md text-center"
           >
-            <i className={`${skill.icon} text-5xl text-blue-400 mb-2`}></i>
+            <i className={`${skill.icon} text-5xl text-slate-200 mb-2`}></i>
             <p>{skill.name}</p>
           </motion.div>
         ))}

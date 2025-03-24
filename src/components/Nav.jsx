@@ -6,7 +6,7 @@ export default function Nav() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
-    const navList = ["intro", "about", "experience", "skills", "certificate", "projects", "contact"];
+    const navList = ["intro", "about", "experience", "skills", "certificates", "projects", "contact"];
 
     useEffect(() => {
         const handleScroll = () => {
@@ -40,30 +40,30 @@ export default function Nav() {
                     <div className="hidden md:flex space-x-4">
                         {navList.map((section) => (
                             <button key={section} onClick={() => scrollToSection(section)}
-                                className={`capitalize text-lg font-small transition-all px-4 py-2 rounded-lg ${activeSection === section ? "text-blue-400 font-bold" : "text-gray-300 hover:text-white hover:bg-gray-800/40"}`}>
+                                className={`capitalize text-lg font-bold p-2 transition-all ${activeSection === section ? "text-blue-400 font-bold" : "text-slate-200 hover:text-blue-400"}`}>
                                 {section}
                             </button>
                         ))}
                     </div>
-                    <button className="md:hidden text-white" onClick={() => setSidebarOpen(true)}>
+                    <button className="md:hidden text-slate-200" onClick={() => setSidebarOpen(true)}>
                         <Menu size={30} />
                     </button>
                 </div>
             </nav>
-            <div className={`fixed top-0 right-0 h-full w-48 bg-[#3E3E42] text-white shadow-xl transform transition-transform z-50 ${sidebarOpen ? "translate-x-0" : "translate-x-full"} md:hidden`}>
+            <div className={`fixed top-0 right-0 h-full w-48 bg-[#121212] text-slate-200 shadow-xl transform transition-transform z-50 ${sidebarOpen ? "translate-x-0" : "translate-x-full"} md:hidden`}>
                 <div className="flex justify-end items-center px-6 py-4">
-                    <button onClick={() => setSidebarOpen(false)}><X size={30} className="text-white" /></button>
+                    <button onClick={() => setSidebarOpen(false)}><X size={30} className="text-slate-200" /></button>
                 </div>
                 <div className="flex flex-col space-y-6 px-6 py-6">
                     {navList.map((section) => (
                         <button key={section} onClick={() => scrollToSection(section)}
-                            className={`capitalize text-xl font-medium py-1 transition-all duration-300 ${activeSection === section ? "text-blue-400 font-bold" : "text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg px-4"}`}>
+                        className={`capitalize text-lg font-bold p-2 transition-all ${activeSection === section ? "text-blue-400 font-bold" : "text-slate-200 hover:text-blue-400"}`}>
                             {section}
                         </button>
                     ))}
                 </div>
             </div>
-            {sidebarOpen && <div className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden" onClick={() => setSidebarOpen(false)}></div>}
+            {sidebarOpen && <div className="fixed inset-0 bg-opacity-50 z-40 md:hidden" onClick={() => setSidebarOpen(false)}></div>}
         </div>
     );
 }

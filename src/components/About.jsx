@@ -1,10 +1,8 @@
-"use client";
-
 import { motion } from "framer-motion";
 
 export default function About() {
     return (
-        <div className="text-white min-h-screen flex flex-col items-center justify-center px-6 mt-12 bg-blue-800">
+        <div className="min-h-screen flex flex-col items-center justify-center px-4">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -19,14 +17,14 @@ export default function About() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.8 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
-                    className="text-4xl md:text-5xl font-extrabold text-center text-white relative"
+                    className="text-4xl md:text-5xl font-bold text-center text-slate-200 relative"
                 >
                     About Me
                     <motion.span
                         initial={{ width: 0 }}
                         whileInView={{ width: "6rem" }}
                         exit={{ width: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                         className="block h-1 bg-blue-500 mx-auto mt-2 rounded-full"
                     />
                 </motion.h1>
@@ -38,7 +36,7 @@ export default function About() {
                     exit={{ opacity: 0, y: -30 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                     viewport={{ amount: 0.3 }}
-                    className="mt-8 max-w-3xl bg-gray-800 backdrop-blur-md p-6 md:p-8 rounded-xl shadow-lg"
+                    className="max-w-3xl p-6 md:p-8"
                 >
                     {[
                         "Hi, I'm Diamond Engalan Rivero, an aspiring computer programmer from Taguig, Philippines, with a deep interest in system-level development...",
@@ -52,7 +50,7 @@ export default function About() {
                             exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 + index * 0.2 }}
                             viewport={{ amount: 0.3 }}
-                            className="text-lg md:text-2xl text-white text-center leading-relaxed mt-6"
+                            className="text-lg md:text-2xl font-serif text-slate-200 text-justify leading-relaxed mt-6"
                         >
                             {text}
                         </motion.p>

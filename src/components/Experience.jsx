@@ -20,7 +20,7 @@ export default function Experience() {
       ],
     },
     {
-      title: "Career",
+      title: "Careers",
       items: [
         {
           company: "Company A",
@@ -52,14 +52,14 @@ export default function Experience() {
   ];
 
   return (
-    <div className="text-white min-h-screen flex flex-col items-center justify-center px-6 mt-12">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4">
       {/* Animated Title */}
       <motion.h1
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.8 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-4xl md:text-5xl font-extrabold text-center text-white relative mb-8"
+        className="text-4xl md:text-5xl font-extrabold text-center text-slate-200 relative mb-8"
       >
         Experience
         <motion.span
@@ -78,7 +78,7 @@ export default function Experience() {
           whileInView={{ height: "100%" }}
           exit={{ height: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-600"
+          className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-400"
         ></motion.div>
 
         {experiences.map((section, index) => (
@@ -98,9 +98,9 @@ export default function Experience() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               viewport={{ amount: 0.3 }}
-              className="w-full bg-gray-800 p-6 rounded-lg shadow-lg text-center"
+              className="w-full bg-gray-700 p-6 rounded-lg shadow-lg text-center"
             >
-              <h3 className="text-2xl font-bold text-blue-400 mb-4">{section.title}</h3>
+              <h3 className="text-2xl font-bold text-slate-200 mb-4">{section.title}</h3>
               <div className="space-y-4">
                 {section.items.map((item, i) => (
                   <motion.div
@@ -110,9 +110,9 @@ export default function Experience() {
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 + i * 0.2 }}
                     viewport={{ amount: 0.3 }}
-                    className="bg-gray-900 p-4 rounded-md shadow"
+                    className="bg-[#121212] p-4 rounded-lg"
                   >
-                    <p className="text-lg text-white font-semibold">{item.role || item.degree}</p>
+                    <p className="text-lg text-slate-200 font-semibold">{item.role || item.degree}</p>
                     <p className="text-gray-300">{item.company || item.institution || item.organization}</p>
                     <p className="text-gray-400">{item.years}</p>
                   </motion.div>
