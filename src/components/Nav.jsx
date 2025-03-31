@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 export default function Nav() {
     const [activeSection, setActiveSection] = useState("");
-    const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
     const navList = ["intro", "about", "experience", "skills", "certificates", "projects", "contact"];
@@ -29,14 +29,16 @@ export default function Nav() {
 
     const scrollToSection = (id) => {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-        setSidebarOpen(false);
+        setDropdownOpen(false);
     };
 
     return (
-        <div className="overflow-x-hidden w-full">
-            <nav className={`fixed top-0 left-0 w-full backdrop-blur-lg bg-opacity-50 transition-all duration-300 z-50 ${scrolled ? "bg-transparent py-2" : "py-4"}`}>
+        <div className="overflow-x-hidden w-full mb-4">
+            <nav className={`fixed top-0 left-0 w-full backdrop-blur-lg bg-opacity-50 transition-all duration-300 z-50 ${scrolled ? "bg-slate-800" : "bg-transparent py-2"}`}>
                 <div className="w-full flex justify-between items-center px-4 md:px-8">
                     <h1 className="text-xl font-extrabold text-slate-200">Diamond Rivero</h1>
+                    
+                    {/* Desktop Navigation */}
                     <div className="hidden md:flex space-x-4">
                         {navList.map((section) => (
                             <button key={section} onClick={() => scrollToSection(section)}
@@ -45,25 +47,28 @@ export default function Nav() {
                             </button>
                         ))}
                     </div>
-                    <button className="md:hidden text-slate-200" onClick={() => setSidebarOpen(true)}>
-                        <Menu size={30} />
-                    </button>
+
+                    {/* Mobile Navigation - Terminal Style Dropdown */}
+                    <div className="relative md:hidden">
+                        <button className="py-2 text-slate-200 flex items-center gap-2" onClick={() => setDropdownOpen(!dropdownOpen)}>
+                            <span className="text-lg">[ Menu ]</span>
+                            <ChevronDown size={24} />
+                        </button>
+
+                        {/* Dropdown */}
+                        <div className={`absolute right-0 mt-2 w-48 bg-[#121212] text-slate-200 border border-blue-400 rounded-md shadow-lg transition-all duration-300 ${dropdownOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}`}>
+                            <div className="flex flex-col space-y-2 p-3">
+                                {navList.map((section) => (
+                                    <button key={section} onClick={() => scrollToSection(section)}
+                                        className={`capitalize text-lg font-bold p-2 transition-all text-left ${activeSection === section ? "text-blue-400 font-bold" : "text-slate-200 hover:text-blue-400"}`}>
+                                        {section}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </nav>
-            <div className={`fixed top-0 right-0 h-full w-48 bg-[#121212] text-slate-200 shadow-xl transform transition-transform z-50 ${sidebarOpen ? "translate-x-0" : "translate-x-full"} md:hidden`}>
-                <div className="flex justify-end items-center px-6 py-4">
-                    <button onClick={() => setSidebarOpen(false)}><X size={30} className="text-slate-200" /></button>
-                </div>
-                <div className="flex flex-col space-y-6 px-6 py-6">
-                    {navList.map((section) => (
-                        <button key={section} onClick={() => scrollToSection(section)}
-                        className={`capitalize text-lg font-bold p-2 transition-all ${activeSection === section ? "text-blue-400 font-bold" : "text-slate-200 hover:text-blue-400"}`}>
-                            {section}
-                        </button>
-                    ))}
-                </div>
-            </div>
-            {sidebarOpen && <div className="fixed inset-0 bg-opacity-50 z-40 md:hidden" onClick={() => setSidebarOpen(false)}></div>}
         </div>
     );
 }

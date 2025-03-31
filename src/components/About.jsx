@@ -50,7 +50,7 @@ export default function About() {
                             exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 + index * 0.2 }}
                             viewport={{ amount: 0.3 }}
-                            className="text-lg md:text-2xl font-serif text-slate-200 text-justify leading-relaxed mt-6"
+                            className="text-lg md:text-2xl text-slate-200 text-justify leading-relaxed mt-6"
                         >
                             {text}
                         </motion.p>

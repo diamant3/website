@@ -14,9 +14,7 @@ export default function App() {
     <div className="overflow-x-hidden w-full">
       <Analytics />
         <Nav />
-      <section id="intro">
-        <Introduction />
-      </section>
+      <section id="intro"><Introduction /></section>
       <section id="about"><About /></section>
       <section id="experience"><Experience /></section>
       <section id="skills"><Skills /></section>
