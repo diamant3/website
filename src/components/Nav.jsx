@@ -6,7 +6,7 @@ export default function Nav() {
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
-    const navList = ["intro", "about", "experience", "skills", "certificates", "projects", "contact"];
+    const navList = ["intro", "about", "experience", "skills", "projects", "contact"];
 
     useEffect(() => {
         const handleScroll = () => {
