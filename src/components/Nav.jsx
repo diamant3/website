@@ -36,7 +36,7 @@ export default function Nav() {
         <div className="overflow-x-hidden w-full mb-4">
             <nav className={`fixed top-0 left-0 w-full backdrop-blur-lg bg-opacity-50 transition-all duration-300 z-50 ${scrolled ? "bg-slate-800" : "bg-transparent py-2"}`}>
                 <div className="w-full flex justify-between items-center px-4 md:px-8">
-                    <h1 className="text-xl font-extrabold text-slate-200">Lugawan69</h1>
+                    <h1 className="text-xl font-extrabold text-slate-200">Diamond Rivero</h1>
                     
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex space-x-4">
